@@ -26,6 +26,12 @@ app.use('/', routes);
 app.use('/users', users);
 app.use('/reqCheerio',reqCheerio);
 // catch 404 and forward to error handler
+
+//mongo connection
+require('mongoose').connect('mongodb://localhost/test', function(error){
+    if (error) console.log();
+    else console.log('connected to mongodb')});
+
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
   err.status = 404;

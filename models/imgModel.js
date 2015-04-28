@@ -10,22 +10,21 @@
  */
 var mongoose = require('mongoose');
 
-var imgModel = mongoose.model('session',{
+var imgModel = mongoose.model('images',{
 
     img_url :{
         type: String,
-        required: true,
-        unique: true
+        required: true
+
     },
     fired_url:{
         type: String,
-        required: true,
-        unique: true
+        required: true
+
     },
     uuid:{
         type: String,
-        required: true,
-        unique: true
+        required: true
     }
 });
 
